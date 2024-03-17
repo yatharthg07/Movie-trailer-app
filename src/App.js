@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import MovieList from './MovieList';
+import SearchBox from './SearchBox';
+import './styles.css'; // Import global styles
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Movie App</h1>
+      <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <MovieList searchTerm={searchTerm} />
     </div>
   );
 }

@@ -1,0 +1,70 @@
+.App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .SearchBox {
+    margin-bottom: 20px;
+  }
+  
+  .MovieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .MovieCard {
+    width: 250px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .MovieCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .MovieCard img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .Trailer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .Trailer iframe {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  
+  .TrailerRow {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  
+  .TrailerRow.selected {
+    visibility: visible;
+  }
+  
+/* 
+   .select{
+    
+  }
+
+  .tr{
+    width: 100vw;
+  }  */
+
+  

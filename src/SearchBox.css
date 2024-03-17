@@ -1,0 +1,13 @@
+.SearchBox-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .SearchBox-input:focus {
+    border-color: #007bff;
+  }
+  
