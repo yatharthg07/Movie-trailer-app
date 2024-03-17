@@ -37,8 +37,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
-  animation: fadeIn 1s ease-in-out; /* Add a fade-in animation */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out; 
 }
 
 @keyframes fadeIn {
@@ -129,7 +129,7 @@ body {
   }
   
   .selected {
-    width: 100% ;/* Subtract margin from total width */
+    width: 100% ;
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -140,6 +140,37 @@ body {
   
 
   
+  .CategoryButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .CategoryButtons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .CategoryButtons button:hover {
+    background-color: #0056b3;
+  }
+  .CategoryButtons button:active {
+    background-color: #004080; 
+  }
+  
+  .CategoryHeading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff; 
+  }
   
 
 

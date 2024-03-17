@@ -35,3 +35,27 @@ export async function getTrailerUrl(movieId) {
       return null;
     }
   }
+
+  export async function getNowPlaying() {
+    const response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`);
+    const data = await response.json();
+    return data;
+  }
+  
+  export async function getPopular() {
+    const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`);
+    const data = await response.json();
+    return data;
+  }
+  
+  export async function getTopRated() {
+    const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`);
+    const data = await response.json();
+    return data;
+  }
+  
+  export async function getUpcoming() {
+    const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`);
+    const data = await response.json();
+    return data;
+  }

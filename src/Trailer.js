@@ -33,7 +33,7 @@ function Trailer({ movie }) {
             ></iframe>
           </div>
         ) : (
-          <img src='novideo.jpg' alt="Dummy video" style={{ width: '100%', borderRadius: '10px' }} />
+          <img src='novideo.jpg' alt="Dummy video" style={{ width: '300px', borderRadius: '10px' }} />
         )
       )}
     </div>
