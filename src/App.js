@@ -1,8 +1,8 @@
-// App.js
+
 import React, { useState } from 'react';
 import MovieList from './MovieList';
 import SearchBox from './SearchBox';
-import './styles.css'; // Import global styles
+import './styles.css';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +11,9 @@ function App() {
     
     <div className="App">
       <div class="background"></div>
-      <h1 className='Header'>Trailer-Flix</h1>
+      <h1 className='Header'>
+        <a href="/">Trailer-Flix</a>
+      </h1>
       <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <MovieList searchTerm={searchTerm} />
     </div>

@@ -1,4 +1,4 @@
-// Trailer.js
+
 import React, { useEffect, useState } from 'react';
 import { getTrailerUrl } from './api';
 
@@ -24,7 +24,7 @@ function Trailer({ movie }) {
           <iframe
             src={trailerUrl}
             title={movie.title}
-            width="560"
+            width="300"
             height="400"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

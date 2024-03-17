@@ -1,4 +1,4 @@
-// MovieList.js
+
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 import Trailer from './Trailer';
@@ -10,13 +10,14 @@ function MovieList({ searchTerm }) {
   const [selectedMovieIndex, setSelectedMovieIndex] = useState(null);
 
   useEffect(() => {
+    setSelectedMovie(null);
+    setSelectedMovieIndex(null);
     if (searchTerm) {
-      // Fetch movies based on search term
       searchMovies(searchTerm).then(data => {
         setMovies(data.results);
       });
     } else {
-      // Fetch popular movies when search term is empty
+    
       getMovies().then(data => {
         setMovies(data);
       });
@@ -29,14 +30,17 @@ function MovieList({ searchTerm }) {
   }
 
   const movieCards = movies.map((movie, index) => (
+   <div style={{width:"320px"}}>
     <React.Fragment key={movie.id}>
       <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie, index)} />
       {selectedMovieIndex === index && (
-        <div className={`TrailerRow ${selectedMovieIndex === index ? 'selected' : ''}`}>
+        <div className={`${selectedMovieIndex === index ? 'selected' : ''}`}>
           <Trailer movie={selectedMovie} />
         </div>
       )}
     </React.Fragment>
+    </div> 
+
   ));
 
   return (
