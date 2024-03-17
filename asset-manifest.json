@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/www.yatharthg07.github.io/Movie-trailer-app/static/css/main.2d4c77ba.css",
-    "main.js": "/www.yatharthg07.github.io/Movie-trailer-app/static/js/main.38fd1a97.js",
-    "static/js/453.0b30a3d5.chunk.js": "/www.yatharthg07.github.io/Movie-trailer-app/static/js/453.0b30a3d5.chunk.js",
-    "static/media/movie-background-collage.jpg": "/www.yatharthg07.github.io/Movie-trailer-app/static/media/movie-background-collage.9af8c417b0259721d32b.jpg",
-    "index.html": "/www.yatharthg07.github.io/Movie-trailer-app/index.html",
-    "main.2d4c77ba.css.map": "/www.yatharthg07.github.io/Movie-trailer-app/static/css/main.2d4c77ba.css.map",
-    "main.38fd1a97.js.map": "/www.yatharthg07.github.io/Movie-trailer-app/static/js/main.38fd1a97.js.map",
-    "453.0b30a3d5.chunk.js.map": "/www.yatharthg07.github.io/Movie-trailer-app/static/js/453.0b30a3d5.chunk.js.map"
+    "main.css": "/Movie-trailer-app/static/css/main.351385e4.css",
+    "main.js": "/Movie-trailer-app/static/js/main.eddde5f9.js",
+    "static/js/453.0b30a3d5.chunk.js": "/Movie-trailer-app/static/js/453.0b30a3d5.chunk.js",
+    "static/media/movie-background-collage.jpg": "/Movie-trailer-app/static/media/movie-background-collage.9af8c417b0259721d32b.jpg",
+    "index.html": "/Movie-trailer-app/index.html",
+    "main.351385e4.css.map": "/Movie-trailer-app/static/css/main.351385e4.css.map",
+    "main.eddde5f9.js.map": "/Movie-trailer-app/static/js/main.eddde5f9.js.map",
+    "453.0b30a3d5.chunk.js.map": "/Movie-trailer-app/static/js/453.0b30a3d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d4c77ba.css",
-    "static/js/main.38fd1a97.js"
+    "static/css/main.351385e4.css",
+    "static/js/main.eddde5f9.js"
   ]
 }
