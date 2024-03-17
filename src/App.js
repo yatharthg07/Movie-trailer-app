@@ -8,8 +8,10 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   return (
+    
     <div className="App">
-      <h1>Movie App</h1>
+      <div class="background"></div>
+      <h1 className='Header'>Trailer-Flix</h1>
       <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <MovieList searchTerm={searchTerm} />
     </div>

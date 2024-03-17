@@ -19,12 +19,13 @@ function Trailer({ movie }) {
     <div className="Trailer">
       {trailerUrl && (
         <>
-          <h2>Trailer for {movie.title}</h2>
+          <h2 style={{marginBottom:'20px'}}>Trailer for {movie.title}</h2>
+          
           <iframe
             src={trailerUrl}
             title={movie.title}
             width="560"
-            height="315"
+            height="400"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
