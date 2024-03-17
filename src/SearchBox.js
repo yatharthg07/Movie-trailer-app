@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './SearchBox.css';
 
-function SearchBox({ searchTerm, setSearchTerm }) {
+function SearchBox({ searchTerm, setSearchTerm, handleSearch }) {
   const inputRef = useRef(null);
 
   const handleShortcut = event => {
@@ -20,7 +20,7 @@ function SearchBox({ searchTerm, setSearchTerm }) {
     return () => {
       document.removeEventListener('keydown', handleShortcut);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="SearchBox">
@@ -32,6 +32,9 @@ function SearchBox({ searchTerm, setSearchTerm }) {
         value={searchTerm}
         onChange={handleChange}
       />
+      <button className="SearchBox-button" onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 }
