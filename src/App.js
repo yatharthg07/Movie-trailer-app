@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <div class="background"></div>
       <h1 className='Header'>
-        <a href="/">Trailer-Flix</a>
+        <a href="/Movie-trailer-app">Trailer-Flix</a>
       </h1>
       <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSearch={handleSearch} />
       <MovieList searchTerm={searchTerm} />
