@@ -1,38 +1,47 @@
-import React from 'react';
+// MovieList.js
+import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 import Trailer from './Trailer';
-import { getMovies } from './api.js';
+import { getMovies, searchMovies } from './api.js';
 
 function MovieList({ searchTerm }) {
-  const [movies, setMovies] = React.useState([]);
-  const [selectedMovie, setSelectedMovie] = React.useState(null);
-  const [selectedMovieIndex, setSelectedMovieIndex] = React.useState(null);
+  const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovieIndex, setSelectedMovieIndex] = useState(null);
 
-  React.useEffect(() => {
-    getMovies().then(data => {
-      setMovies(data);
-    });
-  }, []);
+  useEffect(() => {
+    if (searchTerm) {
+      // Fetch movies based on search term
+      searchMovies(searchTerm).then(data => {
+        setMovies(data.results);
+      });
+    } else {
+      // Fetch popular movies when search term is empty
+      getMovies().then(data => {
+        setMovies(data);
+      });
+    }
+  }, [searchTerm]);
 
   function handleMovieClick(movie, index) {
     setSelectedMovie(movie);
     setSelectedMovieIndex(index);
   }
 
-  const movieRows = movies.filter((movie, index) => movie.title.toLowerCase().includes(searchTerm.toLowerCase())).map((movie, index) => (
+  const movieCards = movies.map((movie, index) => (
     <React.Fragment key={movie.id}>
-      <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie, index)} />  
-    {selectedMovieIndex === index && (
+      <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie, index)} />
+      {selectedMovieIndex === index && (
         <div className={`TrailerRow ${selectedMovieIndex === index ? 'selected' : ''}`}>
           <Trailer movie={selectedMovie} />
         </div>
-      )} 
+      )}
     </React.Fragment>
   ));
 
   return (
     <div className="MovieList">
-      {movieRows}
+      {movieCards}
     </div>
   );
 }
