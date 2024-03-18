@@ -11,7 +11,7 @@ function MovieCard({ movie, onClick }) {
   return (
     <div className="MovieCard" onClick={onClick}>
       {imageError ? (
-        <img src='no_img.jpg' alt="Movie Poster" />
+        <img src={process.env.PUBLIC_URL + '/no_img.jpg'} alt="Movie Poster" />
       ) : (
         <img src={getImageUrl(movie.poster_path)} alt={movie.title} onError={handleImageError} />
       )}
