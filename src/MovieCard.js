@@ -15,7 +15,7 @@ function MovieCard({ movie, onClick }) {
       ) : (
         <img src={getImageUrl(movie.poster_path)} alt={movie.title} onError={handleImageError} />
       )}
-      <h2>{movie.title}</h2>
+      <h2 className='MovieTitle'>{movie.title}</h2>
     </div>
   );
 }

@@ -93,24 +93,30 @@ body {
     justify-content: center;
   }
   
+
+  
   .MovieCard {
     width: 300px;
+    padding-bottom: 10px;
     margin: 10px;
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 100px 40px rgba(0, 0, 0, 0.2); /* Increased box-shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
   }
   
   .MovieCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.02); /* Improved hover effect with scaling */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced box-shadow on hover */
   }
   
   .MovieCard img {
     width: 100%;
     height: 350px;
     border-radius: 10px 10px 0 0;
+    margin-bottom: 8px;
   }
+
   
   .TrailerContainer {
     width: 100%;
