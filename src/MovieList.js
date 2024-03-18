@@ -35,7 +35,6 @@ function MovieList({ searchTerm }) {
         });
         break;
       default:
-        
         getNowPlaying().then(data => {
           setMovies(data.results);
         });
@@ -45,26 +44,26 @@ function MovieList({ searchTerm }) {
 
   useEffect(() => {
     if (searchTerm) {
-     
       searchMovies(searchTerm).then(data => {
         setMovies(data.results);
-        
         setSelectedCategory(null);
       });
-    }
-    else{
+    } else {
       getNowPlaying().then(data => {
         setMovies(data.results);
-        setSelectedCategory('Latest')
+        setSelectedCategory('Latest');
       });
-
     }
-    
   }, [searchTerm]);
 
   function handleMovieClick(movie, index) {
-    setSelectedMovie(movie);
-    setSelectedMovieIndex(index);
+    if (selectedMovieIndex === index) {
+      setSelectedMovie(null);
+      setSelectedMovieIndex(null);
+    } else {
+      setSelectedMovie(movie);
+      setSelectedMovieIndex(index);
+    }
   }
 
   const movieCards = movies.map((movie, index) => (
@@ -82,17 +81,16 @@ function MovieList({ searchTerm }) {
 
   return (
     <div>
-        <div className="CategoryButtons">
+      <div className="CategoryButtons">
         <button onClick={() => setSelectedCategory('Latest')}>Now Playing</button>
         <button onClick={() => setSelectedCategory('Popular')}>Popular</button>
         <button onClick={() => setSelectedCategory('TopRated')}>Top Rated</button>
         <button onClick={() => setSelectedCategory('Upcoming')}>Upcoming</button>
       </div>
       <h3 className='CategoryHeading'>{searchTerm ? `Search Results for "${searchTerm}"` : ` ${selectedCategory} Movies`}</h3>
-    <div className="MovieList">
-
-      {movieCards}
-    </div>
+      <div className="MovieList">
+        {movieCards}
+      </div>
     </div>
   );
 }
